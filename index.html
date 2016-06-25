@@ -1,0 +1,24 @@
+<html ng-app="demo">
+    <head>
+        
+        <link rel="stylesheet" href="style/main.css"/>
+
+        <!-- build:css style/external.css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+        <!-- endbuild -->
+        
+        <link rel="icon" type="image/jpeg" href="/app/images/favicon.png">
+    </head>
+    <body ng-controller="MyCtrl">
+        <h1>Hello <span ng-bind="name"></span></h1>
+        <div class="backend-image">
+            This is live reload <span class="fa fa-crop"></span>
+        </div>
+
+        <!-- build:js(..) app/main.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/scripts/services/MyService.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
