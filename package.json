@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "server:dist": "cd dist && nodemon server.js",
     "sass:once": "node-sass app/style/main.scss .tmp/style/main.css",
-    "sass:watch": "node-sass app/style/main.scss .tmp/style/main.css -w",
+    "sass:watch": "npm run sass:once --silent && node-sass app/style/main.scss .tmp/style/main.css -w",
     "karma:once": "karma start --single-run --coverage",
     "karma:watch": "karma start",
     "karma:start": "npm run karma:watch",
@@ -27,7 +27,8 @@
     "build:copy-fonts" : "cp -R bower_components/font-awesome/fonts dist",
     "build:copy-backend": "copyfiles server.js package.json backend/**/* dist",
     "build:npm-install-dist": "cd dist && bundle-dependencies update && npm install --production",
-    "build:npm-pack": "cd dist && npm pack"
+    "build:npm-pack": "cd dist && npm pack",
+    "postinstall" : "bower install"
   },
   "watch": {
     "standard": {
