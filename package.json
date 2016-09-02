@@ -6,7 +6,7 @@
     "test": "standard && npm run karma:once && npm run mocha:once",
     "watch": "npm-watch",
     "standard": "standard",
-    "server": "nodemon server.js",
+    "server": "nodemon server.js --ignore app/",
     "server:dist": "cd dist && nodemon server.js",
     "sass:once": "node-sass app/style/main.scss .tmp/style/main.css",
     "sass:watch": "npm run sass:once --silent && node-sass app/style/main.scss .tmp/style/main.css -w",
